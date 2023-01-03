@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="532.0" prefWidth="791.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InscriptionDonneurController">
+   <children>
+      <Pane layoutX="98.0" layoutY="73.0" prefHeight="532.0" prefWidth="791.0" style="-fx-background-color: #acd2dd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="381.0" fitWidth="567.0" layoutX="218.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/don-sang-controle.jpg" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="enregistrer_button" buttonType="RAISED" layoutX="327.0" layoutY="140.0" onAction="#enregistrerInfos" prefHeight="161.0" prefWidth="160.0" style="-fx-background-color: #d46c6c; -fx-background-radius: 1000px;" text="Enregistrer &#10;informations" textAlignment="CENTER" textFill="#940707">
+               <font>
+                  <Font name="Andalus" size="21.0" />
+               </font>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.5426999926567078" green="0.7202566862106323" blue="0.8100000023841858" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <TextField fx:id="nom_field" layoutX="32.0" layoutY="76.0" prefHeight="25.0" prefWidth="215.0" promptText="Nom complet..." />
+            <TextField fx:id="adresse_field" layoutX="32.0" layoutY="128.0" prefHeight="25.0" prefWidth="215.0" promptText="Adresse..." />
+            <TextField fx:id="mail_field" layoutX="32.0" layoutY="184.0" prefHeight="25.0" prefWidth="215.0" promptText="Email..." />
+            <Label layoutX="35.0" layoutY="243.0" text="Date de naissance" />
+            <Label layoutX="35.0" layoutY="301.0" text="Genre" />
+            <Label layoutX="35.0" layoutY="347.0" prefHeight="17.0" prefWidth="95.0" text="Groupe sanguin" />
+            <TextArea fx:id="remarques_area" layoutX="32.0" layoutY="383.0" prefHeight="98.0" prefWidth="215.0" promptText="Remarques..." />
+            <Label layoutX="295.0" layoutY="39.0" text="Inscription&#10; donneur">
+               <font>
+                  <Font name="Bookman Old Style" size="30.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="combo_date_naissance" layoutX="162.0" layoutY="239.0" prefHeight="25.0" prefWidth="84.0" />
+            <JFXComboBox fx:id="combo_genre" layoutX="138.0" layoutY="289.0" prefHeight="25.0" prefWidth="108.0" />
+            <JFXComboBox fx:id="combo_GS" layoutX="150.0" layoutY="330.0" prefHeight="25.0" prefWidth="95.0" />
+            <Label fx:id="erreur_champ" layoutX="151.0" layoutY="105.0" text="Champ obligatoire!" textFill="#800606" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreur_champ1" layoutX="151.0" layoutY="153.0" text="Champ obligatoire!" textFill="#800606" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreur_champ2" layoutX="151.0" layoutY="213.0" text="Champ obligatoire!" textFill="#800606" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreur_champ3" layoutX="151.0" layoutY="266.0" text="Champ obligatoire!" textFill="#800606" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreur_champ4" layoutX="146.0" layoutY="322.0" text="Champ obligatoire!" textFill="#800606" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreur_champ5" layoutX="151.0" layoutY="364.0" text="Champ obligatoire!" textFill="#800606" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

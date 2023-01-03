@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="717.0" style="-fx-background-color: #acd2dd;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LogIn">
+   <left>
+      <AnchorPane prefHeight="446.0" prefWidth="362.0" style="-fx-background-color: #acd2dd;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane layoutX="69.0" layoutY="91.0" prefHeight="452.0" prefWidth="389.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-27.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane fx:id="pane_login">
+                     <children>
+                        <Label layoutX="32.0" layoutY="146.0" prefHeight="38.0" prefWidth="104.0" text="Identifiant" textFill="#bb1c2b">
+                           <font>
+                              <Font name="Roboto" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="26.0" layoutY="196.0" prefHeight="38.0" prefWidth="104.0" text="Mot de passe" textFill="#bb1c2b">
+                           <font>
+                              <Font name="Roboto" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="username_field" layoutX="136.0" layoutY="152.0" prefHeight="26.0" prefWidth="172.0" />
+                        <PasswordField fx:id="password_field" layoutX="137.0" layoutY="202.0" prefHeight="25.0" prefWidth="171.0" />
+                        <Label contentDisplay="CENTER" graphicTextGap="10.0" layoutX="48.0" layoutY="58.0" prefHeight="62.0" prefWidth="267.0" text=" Banque de sang" textAlignment="CENTER" textFill="#d34d4d" textOverrun="CLIP" wrapText="true">
+                           <font>
+                              <Font name="Bauhaus 93" size="34.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="login_button" buttonType="RAISED" layoutX="195.0" layoutY="247.0" onAction="#login" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #d46c6c;" text="Se connecter" textFill="#b52626">
+                           <font>
+                              <Font name="Berlin Sans FB" size="17.0" />
+                           </font>
+                           <ripplerFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9700000286102295" green="0.7372000217437744" blue="0.7372000217437744" opacity="0.8782608509063721" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </ripplerFill>
+                        </JFXButton>
+                        <JFXButton fx:id="signIn_button" buttonType="RAISED" layoutX="14.0" layoutY="364.0" onAction="#signIn" prefHeight="39.0" prefWidth="298.0" style="-fx-background-color: #d46c6c;" text="Vous n'avez pas de compte ? S'inscrire!" textFill="#b52626">
+                           <font>
+                              <Font name="Berlin Sans FB" size="17.0" />
+                           </font>
+                           <ripplerFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.9700000286102295" green="0.7372000217437744" blue="0.7372000217437744" opacity="0.8782608509063721" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </ripplerFill>
+                        </JFXButton>
+                        <ImageView fitHeight="86.0" fitWidth="74.0" layoutX="287.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/sign-up.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="error_text" layoutX="141.0" layoutY="227.0" text="Mot de passe ou identifiant incorrect..." textFill="#c31919" visible="false">
+                           <font>
+                              <Font name="System Italic" size="10.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="exit_button" buttonType="RAISED" ellipsisString="" layoutX="23.0" layoutY="12.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" onAction="#exit" prefHeight="20.0" prefWidth="20.0" ripplerFill="#821a1adf" style="-fx-background-color: #dd0606; -fx-background-radius: 50;" text="X" textFill="#dd0606c9" />
+                        <JFXButton fx:id="reduce_button" buttonType="RAISED" ellipsisString="" layoutX="48.0" layoutY="12.0" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" onAction="#reduceWindow" prefHeight="20.0" prefWidth="20.0" ripplerFill="#ffeb11de" style="-fx-background-color: orange; -fx-background-radius: 50;" text="X" textFill="#dd0606c9" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <ImageView fitHeight="255.0" fitWidth="370.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../img/don-sang-controle.jpg" />
+         </image>
+      </ImageView>
+   </right>
+</BorderPane>

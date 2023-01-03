@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="484.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InscriptionUserController">
+   <children>
+      <Pane fx:id="paneSignUp" layoutX="10.0" layoutY="10.0" prefHeight="364.0" prefWidth="484.0" style="-fx-background-color: #acd2dd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label contentDisplay="CENTER" graphicTextGap="10.0" layoutX="70.0" layoutY="39.0" prefHeight="62.0" prefWidth="267.0" text=" Banque de sang" textAlignment="CENTER" textFill="#d34d4d" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Bauhaus 93" size="34.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="251.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/sign-up.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="username_field_signup" layoutX="108.0" layoutY="193.0" prefHeight="36.0" prefWidth="268.0" promptText="Nom d'utilisateur" />
+            <Label contentDisplay="CENTER" graphicTextGap="10.0" layoutX="81.0" layoutY="124.0" prefHeight="62.0" prefWidth="333.0" text="Création de compte" textAlignment="CENTER" textFill="#d34d4d" wrapText="true">
+               <font>
+                  <Font name="Bauhaus 93" size="34.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="signUp_button" buttonType="RAISED" layoutX="309.0" layoutY="306.0" onAction="#continuerInscription" prefHeight="33.0" prefWidth="145.0" style="-fx-background-color: #d46c6c;" text="Continuer l'inscription" textFill="#900909">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="back_button" buttonType="RAISED" layoutX="25.0" layoutY="327.0" onAction="#back" style="-fx-background-color: #d46c6c;" text="Retour" textFill="#800e0e" />
+            <PasswordField fx:id="password_field" layoutX="109.0" layoutY="245.0" prefHeight="33.0" prefWidth="267.0" promptText="Mot de passe..." />
+            <Label fx:id="error_username" layoutX="204.0" layoutY="229.0" text="Ce nom d'utilisateur a déjà été pris!" textFill="#9a0e0e" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="empty_password_label" layoutX="229.0" layoutY="278.0" text="Choisissez votre mot de passe!" textFill="#a10707" visible="false">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

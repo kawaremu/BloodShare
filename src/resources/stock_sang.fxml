@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="916.0" style="-fx-background-color: #ffc442; -fx-background-radius: 5px;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StockSangController">
+   <children>
+      <Pane layoutX="45.0" layoutY="535.0" prefHeight="124.0" prefWidth="299.0" style="-fx-background-color: #a1c7db;">
+         <children>
+            <JFXComboBox fx:id="combo_type_sang" layoutX="118.0" layoutY="25.0" prefHeight="25.0" prefWidth="144.0" />
+            <Label layoutX="14.0" layoutY="29.0" text="Type de sang">
+               <font>
+                  <Font name="Book Antiqua" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="fitrer_button" buttonType="RAISED" layoutX="173.0" layoutY="73.0" onAction="#filtrerParType" prefHeight="37.0" prefWidth="88.0" style="-fx-background-color: #627a86;" text="Compter">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.27162525057792664" green="0.5638960003852844" blue="0.6447368264198303" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.9694444537162781" blue="0.3888888955116272" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="77.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/selective.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="29.0" layoutY="57.0" prefHeight="51.0" prefWidth="41.0" style="-fx-border-color: #063970; -fx-border-radius: 5px;">
+               <children>
+                  <Label fx:id="compteur_type_sang" layoutX="13.0" layoutY="4.0">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label layoutX="70.0" layoutY="6.0" text="Nombre de sachets restants ">
+               <font>
+                  <Font name="Book Antiqua" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreur_champ" layoutX="178.0" layoutY="50.0" text="Champ obligatoire!" textFill="#9a1919" visible="false">
+               <font>
+                  <Font name="System Italic" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="161.0" fitWidth="165.0" layoutX="755.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/stock_sang.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="131.0" fitWidth="88.0" layoutX="53.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/blood-sample.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="126.0" layoutY="58.0" text="Stock de sang" textFill="#0a2f8d">
+         <font>
+            <Font name="Berlin Sans FB" size="45.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_stock_sang" layoutX="31.0" layoutY="126.0" prefHeight="405.0" prefWidth="860.0">
+         <columns>
+            <TableColumn fx:id="id_don_col" prefWidth="56.0" resizable="false" text="ID don" />
+            <TableColumn fx:id="nom_donneur_col" prefWidth="117.0" resizable="false" text="Nom donneur" />
+            <TableColumn fx:id="groupe_sanguin_col" prefWidth="97.0" resizable="false" text="Groupe sanguin" />
+            <TableColumn fx:id="type_sang_col" prefWidth="135.0" resizable="false" text="Type de sang" />
+            <TableColumn fx:id="date_collecte_col" prefWidth="128.0" resizable="false" text="Date de collecte" />
+            <TableColumn fx:id="medecin_col" prefWidth="150.0" resizable="false" text="Médecin responsable" />
+            <TableColumn fx:id="hopital_col" prefWidth="176.0" resizable="false" text="Hopitâl" />
+         </columns></TableView>
+      <JFXButton fx:id="detruire_perime_button" buttonType="RAISED" layoutX="616.0" layoutY="560.0" onAction="#detruireStockPerime" style="-fx-border-color: brown;" text="Détruire stock périmé" textFill="#a13313">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="576.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/dump.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

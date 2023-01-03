@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="989.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RepertoireDonneursController">
+   <children>
+      <Pane layoutX="-6.0" prefHeight="637.0" prefWidth="989.0" style="-fx-background-color: #b4dd7f;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="162.0" layoutY="29.0" prefHeight="87.0" prefWidth="614.0" style="-fx-background-color: #f2da43;">
+               <children>
+                  <Label layoutX="161.0" layoutY="14.0" text="Répertoire des donneurs" textFill="#ab4211">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="93.0" fitWidth="88.0" layoutX="486.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/blood-pressure.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ScrollPane layoutX="17.0" layoutY="108.0">
+               <content>
+                  <TableView fx:id="repertoireDonneurs_table" prefHeight="473.0" prefWidth="932.0">
+                     <columns>
+                        <TableColumn fx:id="nom_col" prefWidth="130.0" resizable="false" text="Nom donneur" />
+                        <TableColumn fx:id="adresse__col" prefWidth="100.0" resizable="false" text="Adresse" />
+                        <TableColumn fx:id="mail_col" prefWidth="158.0" text="E-mail" />
+                        <TableColumn fx:id="groupe_sanguin_col" prefWidth="112.0" resizable="false" text="Groupe sanguin" />
+                        <TableColumn fx:id="age_col" prefWidth="66.0" resizable="false" text="Age" />
+                        <TableColumn fx:id="genre_col" prefWidth="72.0" resizable="false" text="Genre" />
+                        <TableColumn fx:id="nbre_don_col" prefWidth="74.0" resizable="false" text="Dons faits" />
+                        <TableColumn fx:id="remarques_col" prefWidth="219.0" resizable="false" text="Remarques" />
+                     </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

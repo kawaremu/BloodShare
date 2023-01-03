@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="852.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RequetesReceveursController">
+   <children>
+      <Pane layoutX="57.0" layoutY="-37.0" prefHeight="350.0" prefWidth="852.0" style="-fx-background-color: #8cd5de;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="162.0" layoutY="29.0" prefHeight="87.0" prefWidth="576.0" style="-fx-background-color: #f2da43;">
+               <children>
+                  <Label layoutX="110.0" layoutY="14.0" text="Requêtes des receveurs en attente" textFill="#ab4211">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="93.0" fitWidth="88.0" layoutX="486.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/impatient.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ScrollPane layoutX="17.0" layoutY="108.0">
+               <content>
+                  <TableView fx:id="requetesReceveurs_table" prefHeight="233.0" prefWidth="813.0">
+                    <columns>
+                      <TableColumn fx:id="demande_a_col" prefWidth="130.0" resizable="false" text="Demandé le" />
+                      <TableColumn fx:id="demande_par_col" prefWidth="89.0" resizable="false" text="Demandeur" />
+                        <TableColumn fx:id="date_demande_col" prefWidth="89.0" resizable="false" text="Besoin le" />
+                        <TableColumn fx:id="groupe_sanguin_col" prefWidth="107.0" resizable="false" text="Groupe sanguin" />
+                        <TableColumn fx:id="type_sang_col" prefWidth="160.0" resizable="false" text="Type sang" />
+                        <TableColumn fx:id="objectifs_col" prefWidth="237.0" resizable="false" text="Objectifs" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
